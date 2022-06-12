@@ -1,0 +1,468 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+}
+.header{
+
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgb(4, 9, 30,0.7),rgba(4,9,30,0.7)),url(bild/cozinha.jpg);
+    background-position:center;
+    background-size:cover;
+    position:relative;
+}
+nav{
+    display:flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items:center;
+}
+nav img{
+    width: 80px;
+    height: 80px;
+    
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    padding: 8px 12px;
+}
+.nav-links ul li a{
+    color:var(--primary-color);
+    text-decoration: none;
+    font-size: 15px;
+
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #04e616;
+    display:block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+:root{
+    --primary-color:rgb(220, 243, 12);
+    --secondary-color:#212121;
+    --third-color:#fff;
+    --fourth-color:rgba(52, 201, 6, 0.486);
+}
+#icon{
+   width: 25px;
+   height: 28px;
+    cursor: pointer;
+    margin-left: 10px;
+   
+}
+.text-box{
+    width: 80%;
+    color:var(--third-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    text-align: center;
+
+}
+.text-box h1{
+    font-size: 40px;
+}
+.text-box p{
+    font-size: 25px;
+    margin: 10px 0 40px;
+    color: var(--third-color);
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 12px 34px;
+    font-size: 20px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+    
+}
+.hero-btn:hover{ 
+    background-color:#00ac0e;
+    border: 1px solid #00ac0e;
+    color: var(--third-color);
+}
+/*---- receitas ----*/
+.receitas{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+h1{
+    font-size: 40px;
+    font-weight: 600;
+}
+p{
+    font-size: 25px;
+    color: rgb(151, 149, 149);
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+ol li{
+    list-style-position:inside;
+    font-size: 25px;
+    color:  var(--secondary-color);
+    font-weight: 300;
+    line-height: 22px;
+    padding: 30px;
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between ;
+}
+.receitas-col{
+    flex-basis: 30%;
+    background: rgba(52, 201, 6, 0.486);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing:border-box;
+    transition:0.5s
+}
+h3{
+    text-align: center;
+    font-weight: 800;
+    margin: 10px 0;
+}
+.receitas-col:hover{
+box-shadow: 0 0 20px 10px rgba(0, 0, 0,0.2)
+}
+/*---- amostras ----*/
+.amostra{
+width: 80%;
+margin: auto;
+text-align: center;
+padding-top: 50px;
+}
+.amostras-col{
+flex-basis: 30%;
+border-radius: 10px ;
+margin-bottom: 30px;
+position: relative;
+overflow: hidden;
+transition: 0.5s;
+}
+.amostras-col:hover{
+    transition: 0.5s;
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0,0.5);
+}
+.amostras-col img{
+    width: 100%;
+    display: block;
+}
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+transition: 0.5s;
+}
+.layer:hover{
+    background: rgba(61, 233, 9, 0.658);
+}
+.layer h3 {
+    width: 100%;
+    font-weight: 600;
+    color: var(--third-color);
+    font-size: 25px;
+    bottom: 0;
+    left: 50%;
+    transform:translateX(-50%) ;
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+    
+}
+.layer a{
+    text-decoration: none;
+    color: var(--third-color);
+    width: 600;
+    font-size: 25px;
+    
+}
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+/*---- testemonials ----*/
+.testemonials{
+    width: 80% ;
+    margin: auto;
+    padding-top: 100px ;
+    text-align: center;
+}
+.testemonials-col{
+    flex-basis: 44%;
+    border-radius: 10px ;
+    margin-bottom: 5%;
+    text-align:left ;
+    background: rgba(43, 241, 3, 0.479);
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+    box-shadow: 6px 6px 10px rgba(0,0,0,0.5),
+                -6px -6px 10px rgba(201, 201, 201, 0.5);
+}
+.testemonials-col img{
+    height: 50px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+
+}
+.testemonials-col p{
+    padding: 0;
+    
+}
+.testemonials-col h3{
+    text-align: left;
+    margin-top: 15px;
+
+}
+.testemonials-col .fa{
+    color: #69db1d;
+    
+}
+.cta{
+    margin: 10% auto ;
+    width: 80%;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7),rgba(78, 75, 75, 0.7)),url(bild/vitamina.jpg);
+    box-shadow: 6px 6px 10px rgba(255, 255, 255, 0.747),
+                -6px -6px 10px rgba(0, 0, 0, 0.7);
+    background-position:center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+.cta h1{
+    color:var(--third-color);
+    margin-bottom: 40px;
+    padding: 0;
+}
+.cta a{
+    font-size: 25px;
+    font-weight: 500;
+}
+/*---- footer ----*/
+footer{
+    width: 100%;
+    position: relative;
+    background: linear-gradient(-45deg,#002c04,#00bd10,#041406);
+    background-size: 400% 400%;
+    color:var(--third-color);
+    padding: 40px 0 30px;
+    border-top-left-radius: 125px;
+    font-size: 10px;
+    line-height: 20px;
+    animation: gradient 15s ease-in-out infinite;
+}
+@keyframes gradient{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+.raw{
+    width:85% ;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    
+}
+.cal {
+    flex-basis: 25%;
+    padding: 0px;
+  
+}
+.raw .cal a{
+    font-size: 22px;
+    color: var(--third-color);
+    opacity: 0.8;
+}
+.cal:nth-child(2), .cal:nth-child(3){
+    flex-basis: 15%;
+}
+.cal p{
+    font-size: 22px;
+    color: var(--third-color);
+    opacity: 0.8;
+}
+.logo{
+    width: 60px;
+    margin-bottom: 30px;
+    
+}
+
+.cal h3{
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+}
+.cal h6{
+    font-size: 22px;
+}
+.email-id{
+    width: fit-content;
+    border-bottom: 1px solid #ccc;
+    margin: 20px 0;
+
+}
+ul li{
+    padding-bottom: 10px;
+}
+ul li a{
+    text-decoration: none;
+    color: var(--third-color);
+    font-size: 20px;
+    
+}
+form{
+    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+    width: 50%;
+    transition: 0.5s;
+}
+form:hover{
+    width: 100%;
+    margin-left: 0px;
+}
+form .fa-solid{
+    font-size: 18px;
+    margin-right: 0px;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+form input{
+    width: 50%;
+    background: transparent;
+    color:#ccc;
+    border: 0;
+    outline: none;
+}
+form button{
+    background: transparent;
+    border:0;
+    outline: none;
+    cursor: pointer;
+
+}
+form button .fa-solid{
+    font-size: 16px;
+    color: #ccc;
+    margin-right: 0px;
+}
+.social-icons .fa-brands{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center ;
+    line-height: 40px;
+    font-size: 25px; ;
+    color: #000;
+    background:#fff ;
+    margin-right:15px ;
+    cursor: pointer;
+    margin-top: 40px;
+}
+hr{
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #fff;
+    margin: 20px auto;
+}
+.copyright{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+.underline{
+    width:100% ;
+    height: 5px;
+    background: #767676;
+    position:absolute ;
+    border-radius: 3px;
+    top: 25px;
+    left: 0;
+    overflow: hidden;
+}
+.underline span{
+    width: 20px ;
+    height: 100%;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+
+}
+@keyframes moving{
+    0%{
+        left: -20%;
+    }
+    100%{
+        left: 100%;
+    }
+}
+.up{
+    text-align: right;
+    margin-top: -35px;
+    margin-right: 40px;
+}
+.up i{
+    padding: 0px 12px;
+    border-radius: 20%;
+    transition: 0.5s;
+    width: 18px;
+    height: 0px;
+}
+.up .fa-angle-up:hover{
+    background:#000;
+    width: 18px;
+    height: 30px;
+    color: #fff;
+}
+.up a{
+    color: #767676;
+}
+.up p{
+    color: #767676;
+    font-size: 20px;
+    display: inline-block;
+}  
