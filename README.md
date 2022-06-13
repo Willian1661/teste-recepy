@@ -1,2 +1,2 @@
-# teste-recepy
+# test-recepe
 teste de criação de um site 
